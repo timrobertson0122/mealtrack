@@ -18,7 +18,8 @@
 					       ng-required="true" >
 				</label >
 
-				<div class="form-errors" ng-messages="loginForm.email.$error">
+				<div class="form-errors" 
+					ng-messages="loginForm.email.$error">
 						<div ng-messages-include="templates/form-errors.html"></div>
 				</div>
 
@@ -33,12 +34,15 @@
 					       ng-minlength="6" >
 				</label >
 
-				<div class="form-errors" ng-messages="loginForm.password.$error">
+				<div class="form-errors" 
+					ng-messages="loginForm.password.$error">
 						<div ng-messages-include="templates/form-errors.html"></div>
+							<div class="form-error" 
+								ng-message="minlength">Password too short
+							</div>
 				</div>
 
-				<div class="form-error" ng-message="minlength">Password too short
-				</div>
+				
 
 			</ion-list >
 			<button class="button button-royal button-block"
